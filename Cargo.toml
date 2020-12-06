@@ -3,6 +3,7 @@ name = "bin-stl"
 version = "0.1.0"
 authors = ["sourlemon207 <jw1756@protonmail.com>"]
 edition = "2018"
+description = "A basic library for parsing binary stl files"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
