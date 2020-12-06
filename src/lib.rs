@@ -108,6 +108,7 @@ fn read_triangle<R: Read, P: Point, T: Triangle<P>>(rd: &mut R) -> Result<Option
         Err(ParseError::CorruptData)
     }
 }
+
 pub fn read_stl<R: Read, P: Point, T: Triangle<P>>(
     rd: &mut R,
 ) -> Result<STLData<T, P>, ParseError> {
@@ -131,7 +132,6 @@ pub fn read_stl<R: Read, P: Point, T: Triangle<P>>(
         __phantom__: Default::default(),
     })
 }
-
 
 pub fn write_stl<W: Write, P: Point, T: Triangle<P>, S: AsRef<[T]>>(
     writer: &mut W,
@@ -158,7 +158,6 @@ pub fn write_stl_with_header<W: Write, P: Point, T: Triangle<P>, S: AsRef<[T]>>(
     }
     Ok(())
 }
-
 
 #[cfg(test)]
 mod tests {
